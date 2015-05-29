@@ -16,6 +16,6 @@
     "mocha-lcov-reporter": "0.0.2"
   },
   "dependencies": {
-    "key": "git://github.com/utilise/key"
+    "key": "git+https://github.com/utilise/key.git"
   }
 }
