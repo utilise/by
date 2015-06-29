@@ -11,4 +11,10 @@ describe('by', function() {
     var a = [{val:1}, {val:2}, {val:2}]
     expect(a.filter(by('val', 2))).to.eql([{val:2}, {val:2}])
   })
+
+  it('should filter list with function predicate', function() {
+    var a = [{val:1}, {val:2}, {val:3}]
+      , fn = function(d){ return d > 1 }
+    expect(a.filter(by('val', fn))).to.eql([{val:2}, {val:3}])
+  })
 })
