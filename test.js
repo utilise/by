@@ -17,4 +17,10 @@ describe('by', function() {
       , fn = function(d){ return d > 1 }
     expect(a.filter(by('val', fn))).to.eql([{val:2}, {val:3}])
   })
+
+  it('should filter by key only', function() {
+    var a = [{val:'yes'}, {val:'YES'}, {}]
+    expect(a.filter(by('val'))).to.eql([{val:'yes'}, {val:'YES'}])
+  })
+
 })

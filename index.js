@@ -6,6 +6,7 @@ module.exports = function by(k, v){
     var d = key(k)(o)
     
     return d && v && d.toLowerCase && v.toLowerCase ? d.toLowerCase() === v.toLowerCase()
+         : !v ? Boolean(d)
          : is.fn(v) ? v(d)
          : d == v
   }
