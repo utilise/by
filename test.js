@@ -23,4 +23,9 @@ describe('by', function() {
     expect(a.filter(by('val'))).to.eql([{val:'yes'}, {val:'YES'}])
   })
 
+  it('should filter by undefined', function() {
+    var a = [{val:'yes'}, {val:undefined}, {}]
+    expect(a.filter(by('val', undefined))).to.eql([{val:undefined}, {}])
+  })
+
 })
