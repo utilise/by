@@ -1,5 +1,5 @@
-var key = require('key')
-  , is  = require('is')
+var key = require('utilise.key')
+  , is  = require('utilise.is')
 
 module.exports = function by(k, v){
   var exists = arguments.length == 1
