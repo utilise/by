@@ -28,4 +28,10 @@ describe('by', function() {
     expect(a.filter(by('val', undefined))).to.eql([{val:undefined}, {}])
   })
 
+  it('should allow function as key', function() {
+    var a = [{val:'yes'}, {val:undefined}, {}]
+      , val = function(d){ return d.val }
+    expect(a.filter(by(val, 'yes'))).to.eql([{val:'yes'}])
+  })
+
 })
